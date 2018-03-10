@@ -1,0 +1,5 @@
+{
+  "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.gatk_path": "/prt1/puluotong/PMO/wangxh/Software/src/gatk-4.0.2.0/gatk",
+  "PairendFqtoUnmappedBam_wdl.utilsdir": "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/Utils",
+  "PairendFqtoUnmappedBam_wdl.inputSamplesFile": "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqtoBamMetainfo/execution/fqtobammetainfo.motifeddate.tsv"
+}

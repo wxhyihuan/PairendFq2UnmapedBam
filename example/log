@@ -1,0 +1,166 @@
+java -jar /prt1/puluotong/PMO/wangxh/Software/src/WorkflowDL/cromwell-30.1.jar run PairendFqtoUnmappedBam.wdl --inputs PairendFqtoUnmappedBam.test4.json
+[2018-03-08 11:21:22,15] [info] Running with database db.url = jdbc:hsqldb:mem:e2378f86-7829-4827-8e32-72b5f2f477f7;shutdown=false;hsqldb.tx=mvcc
+[2018-03-08 11:21:32,59] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000
+[2018-03-08 11:21:32,62] [info] [RenameWorkflowOptionsInMetadata] 100%
+[2018-03-08 11:21:32,85] [info] Running with database db.url = jdbc:hsqldb:mem:933bbf91-afc7-47a6-9ede-e03aacee052b;shutdown=false;hsqldb.tx=mvcc
+[2018-03-08 11:21:33,87] [info] Slf4jLogger started
+[2018-03-08 11:21:34,28] [info] Metadata summary refreshing every 2 seconds.
+[2018-03-08 11:21:34,35] [info] WriteMetadataActor configured to write to the database with batch size 200 and flush rate 5 seconds.
+[2018-03-08 11:21:34,36] [info] Starting health monitor with the following checks: DockerHub, Engine Database
+[2018-03-08 11:21:34,41] [info] CallCacheWriteActor configured to write to the database with batch size 100 and flush rate 3 seconds.
+[2018-03-08 11:21:36,01] [info] SingleWorkflowRunnerActor: Submitting workflow
+[2018-03-08 11:21:36,09] [info] Workflow 459749fe-258c-4ab3-b61d-dc8090a69752 submitted.
+[2018-03-08 11:21:36,10] [info] SingleWorkflowRunnerActor: Workflow submitted 459749fe-258c-4ab3-b61d-dc8090a69752
+[2018-03-08 11:21:36,10] [info] 1 new workflows fetched
+[2018-03-08 11:21:36,10] [info] WorkflowManagerActor Starting workflow 459749fe-258c-4ab3-b61d-dc8090a69752
+[2018-03-08 11:21:36,11] [info] WorkflowManagerActor Successfully started WorkflowActor-459749fe-258c-4ab3-b61d-dc8090a69752
+[2018-03-08 11:21:36,11] [info] Retrieved 1 workflows from the WorkflowStoreActor
+[2018-03-08 11:21:38,46] [info] MaterializeWorkflowDescriptorActor [459749fe]: Call-to-Backend assignments: PairendFqtoUnmappedBam_wdl.FqtoBamMetainfo -> Local, PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM -> Local, PairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck -> Local
+[2018-03-08 11:21:40,79] [info] WorkflowExecutionActor-459749fe-258c-4ab3-b61d-dc8090a69752 [459749fe]: Starting calls: PairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck:NA:1
+[2018-03-08 11:21:41,04] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck:NA:1]: perl /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/Utils/metainfo_check.pl /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqtoBamMetainfo/execution/fqtobammetainfo.motifeddate.tsv MetaInfoCheck.out.tsv
+[2018-03-08 11:21:41,08] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck:NA:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PeFq2BamMetaCheck/execution/script
+[2018-03-08 11:21:41,16] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck:NA:1]: job id: 83539
+[2018-03-08 11:21:41,17] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck:NA:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:22:04,16] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck:NA:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:22:08,80] [info] WorkflowExecutionActor-459749fe-258c-4ab3-b61d-dc8090a69752 [459749fe]: Starting calls: PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:0:1, PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:1:1, PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:2:1, PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:3:1, PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:4:1, PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:5:1
+[2018-03-08 11:22:08,83] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:0:1]: /prt1/puluotong/PMO/wangxh/Software/src/gatk-4.0.2.0/gatk --java-options "-Xmx3000m" \
+  FastqToSam \
+    --FASTQ /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-0/execution/NA12878_A_1.fq.gz \
+    --FASTQ2 /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-0/execution/NA12878_A_2.fq.gz \
+    --OUTPUT NA12878_A.unmapped.bam \
+    --READ_GROUP_NAME NA12878_A \
+    --SAMPLE_NAME NA12878 \
+    --LIBRARY_NAME Solexa-NA12878 \
+    --PLATFORM_UNIT H06HDADXX130110.2.ATCACGAT \
+    --RUN_DATE 2016-9-1 \
+    --PLATFORM Illumina \
+    --SEQUENCING_CENTER NRP
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:4:1]: /prt1/puluotong/PMO/wangxh/Software/src/gatk-4.0.2.0/gatk --java-options "-Xmx3000m" \
+  FastqToSam \
+    --FASTQ /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-4/execution/NA12812_B_1.fq.gz \
+    --FASTQ2 /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-4/execution/NA12812_B_2.fq.gz \
+    --OUTPUT NA12812_B.unmapped.bam \
+    --READ_GROUP_NAME NA12812_B \
+    --SAMPLE_NAME NA12812 \
+    --LIBRARY_NAME Solexa-NA12812 \
+    --PLATFORM_UNIT H06HDADXX130119.1.ATCACGAC \
+    --RUN_DATE 2016-9-8 \
+    --PLATFORM Illumina \
+    --SEQUENCING_CENTER NRP
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:2:1]: /prt1/puluotong/PMO/wangxh/Software/src/gatk-4.0.2.0/gatk --java-options "-Xmx3000m" \
+  FastqToSam \
+    --FASTQ /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-2/execution/NA12878_C_1.fq.gz \
+    --FASTQ2 /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-2/execution/NA12878_C_2.fq.gz \
+    --OUTPUT NA12878_C.unmapped.bam \
+    --READ_GROUP_NAME NA12878_C \
+    --SAMPLE_NAME NA12878 \
+    --LIBRARY_NAME Solexa-NA12878 \
+    --PLATFORM_UNIT H06JUADXX130110.1.ATCACGAT \
+    --RUN_DATE 2016-9-1 \
+    --PLATFORM Illumina \
+    --SEQUENCING_CENTER NRP
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:5:1]: /prt1/puluotong/PMO/wangxh/Software/src/gatk-4.0.2.0/gatk --java-options "-Xmx3000m" \
+  FastqToSam \
+    --FASTQ /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-5/execution/NA12812_C_1.fq.gz \
+    --FASTQ2 /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-5/execution/NA12812_C_2.fq.gz \
+    --OUTPUT NA12812_C.unmapped.bam \
+    --READ_GROUP_NAME NA12812_C \
+    --SAMPLE_NAME NA12812 \
+    --LIBRARY_NAME Solexa-NA12812 \
+    --PLATFORM_UNIT H06JUADXX130119.1.ATCACGAC \
+    --RUN_DATE 2016-9-8 \
+    --PLATFORM Illumina \
+    --SEQUENCING_CENTER NRP
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:3:1]: /prt1/puluotong/PMO/wangxh/Software/src/gatk-4.0.2.0/gatk --java-options "-Xmx3000m" \
+  FastqToSam \
+    --FASTQ /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-3/execution/NA12812_A_1.fq.gz \
+    --FASTQ2 /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-3/execution/NA12812_A_2.fq.gz \
+    --OUTPUT NA12812_A.unmapped.bam \
+    --READ_GROUP_NAME NA12812_A \
+    --SAMPLE_NAME NA12812 \
+    --LIBRARY_NAME Solexa-NA12812 \
+    --PLATFORM_UNIT H06HDADXX130119.2.ATCACGAT \
+    --RUN_DATE 2016-9-8 \
+    --PLATFORM Illumina \
+    --SEQUENCING_CENTER NRP
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:5:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-5/execution/script
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:0:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-0/execution/script
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:2:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-2/execution/script
+[2018-03-08 11:22:08,84] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:3:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-3/execution/script
+[2018-03-08 11:22:08,85] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:4:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-4/execution/script
+[2018-03-08 11:22:08,86] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:1:1]: /prt1/puluotong/PMO/wangxh/Software/src/gatk-4.0.2.0/gatk --java-options "-Xmx3000m" \
+  FastqToSam \
+    --FASTQ /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-1/execution/NA12878_B_1.fq.gz \
+    --FASTQ2 /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/FqFilter_wdl/40d80f6c-4356-49a5-95a1-170f1f6116ab/call-FqFilter/shard-1/execution/NA12878_B_2.fq.gz \
+    --OUTPUT NA12878_B.unmapped.bam \
+    --READ_GROUP_NAME NA12878_B \
+    --SAMPLE_NAME NA12878 \
+    --LIBRARY_NAME Solexa-NA12878 \
+    --PLATFORM_UNIT H06HDADXX130110.1.ATCACGAT \
+    --RUN_DATE 2016-9-1 \
+    --PLATFORM Illumina \
+    --SEQUENCING_CENTER NRP
+[2018-03-08 11:22:08,87] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:0:1]: job id: 83908
+[2018-03-08 11:22:08,87] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:3:1]: job id: 83914
+[2018-03-08 11:22:08,87] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:2:1]: job id: 83913
+[2018-03-08 11:22:08,87] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:0:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:22:08,87] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:4:1]: job id: 83938
+[2018-03-08 11:22:08,87] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:3:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:22:08,88] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:5:1]: job id: 83909
+[2018-03-08 11:22:08,88] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:1:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-1/execution/script
+[2018-03-08 11:22:08,88] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:2:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:22:08,88] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:4:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:22:08,88] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:5:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:22:08,89] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:1:1]: job id: 83979
+[2018-03-08 11:22:08,89] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:1:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:24:20,05] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:1:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:24:27,36] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:3:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:24:32,29] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:2:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:24:35,42] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:5:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:24:36,15] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:0:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:24:46,34] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM:4:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:24:48,79] [info] WorkflowExecutionActor-459749fe-258c-4ab3-b61d-dc8090a69752 [459749fe]: Starting calls: PairendFqtoUnmappedBam_wdl.FqtoBamMetainfo:NA:1
+[2018-03-08 11:24:48,82] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.FqtoBamMetainfo:NA:1]: set -e
+set -o pipefail
+
+python << CODE
+unmapped_bams = ['/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-0/execution/NA12878_A.unmapped.bam','/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-1/execution/NA12878_B.unmapped.bam','/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-2/execution/NA12878_C.unmapped.bam','/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-3/execution/NA12812_A.unmapped.bam','/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-4/execution/NA12812_B.unmapped.bam','/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-5/execution/NA12812_C.unmapped.bam']
+readgroup_names = ['NA12878_A','NA12878_B','NA12878_C','NA12812_A','NA12812_B','NA12812_C']
+sample_names = ['NA12878','NA12878','NA12878','NA12812','NA12812','NA12812']
+
+if len(unmapped_bams)!= len(readgroup_names):
+  exit(1)
+
+with open("sample_rg_unmapped_bams.tsv", "w") as fi:
+  for i in range(len(readgroup_names)):
+    fi.write(sample_names[i] + "\t" + readgroup_names[i] + "\t" + unmapped_bams[i] + "\n")
+
+CODE
+
+perl /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/Utils/convertfq2baminfotosamplebamlists.pl sample_rg_unmapped_bams.tsv
+[2018-03-08 11:24:48,85] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.FqtoBamMetainfo:NA:1]: executing: /bin/bash /prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-FqtoBamMetainfo/execution/script
+[2018-03-08 11:24:48,86] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.FqtoBamMetainfo:NA:1]: job id: 86449
+[2018-03-08 11:24:48,86] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.FqtoBamMetainfo:NA:1]: Status change from - to WaitingForReturnCodeFile
+[2018-03-08 11:24:50,33] [info] BackgroundConfigAsyncJobExecutionActor [459749fePairendFqtoUnmappedBam_wdl.FqtoBamMetainfo:NA:1]: Status change from WaitingForReturnCodeFile to Done
+[2018-03-08 11:24:51,81] [info] WorkflowExecutionActor-459749fe-258c-4ab3-b61d-dc8090a69752 [459749fe]: Workflow PairendFqtoUnmappedBam_wdl complete. Final Outputs:
+{
+  "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.sample_names": ["NA12878", "NA12878", "NA12878", "NA12812", "NA12812", "NA12812"],
+  "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.readgroup_names": ["NA12878_A", "NA12878_B", "NA12878_C", "NA12812_A", "NA12812_B", "NA12812_C"],
+  "PairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck.cleanmetainfo": "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PeFq2BamMetaCheck/execution/MetaInfoCheck.out.tsv",
+  "PairendFqtoUnmappedBam_wdl.FqtoBamMetainfo.samplebamlists": ["/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-FqtoBamMetainfo/execution/glob-81c0138a76be7bc42f5ed74e6fb3ab4b/NA12812.unmapedbams.list", "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-FqtoBamMetainfo/execution/glob-81c0138a76be7bc42f5ed74e6fb3ab4b/NA12878.unmapedbams.list"],
+  "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.output_bams": "[\"/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-0/execution/NA12878_A.unmapped.bam\", \"/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-1/execution/NA12878_B.unmapped.bam\", \"/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-2/execution/NA12878_C.unmapped.bam\", \"/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-3/execution/NA12812_A.unmapped.bam\", \"/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFast..."
+}
+[2018-03-08 11:24:51,87] [info] WorkflowManagerActor WorkflowActor-459749fe-258c-4ab3-b61d-dc8090a69752 is in a terminal state: WorkflowSucceededState
+[2018-03-08 11:24:58,15] [info] SingleWorkflowRunnerActor workflow finished with status 'Succeeded'.
+{
+  "outputs": {
+    "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.sample_names": ["NA12878", "NA12878", "NA12878", "NA12812", "NA12812", "NA12812"],
+    "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.readgroup_names": ["NA12878_A", "NA12878_B", "NA12878_C", "NA12812_A", "NA12812_B", "NA12812_C"],
+    "PairendFqtoUnmappedBam_wdl.PeFq2BamMetaCheck.cleanmetainfo": "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PeFq2BamMetaCheck/execution/MetaInfoCheck.out.tsv",
+    "PairendFqtoUnmappedBam_wdl.FqtoBamMetainfo.samplebamlists": ["/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-FqtoBamMetainfo/execution/glob-81c0138a76be7bc42f5ed74e6fb3ab4b/NA12812.unmapedbams.list", "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-FqtoBamMetainfo/execution/glob-81c0138a76be7bc42f5ed74e6fb3ab4b/NA12878.unmapedbams.list"],
+    "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.output_bams": ["/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-0/execution/NA12878_A.unmapped.bam", "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-1/execution/NA12878_B.unmapped.bam", "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-2/execution/NA12878_C.unmapped.bam", "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-3/execution/NA12812_A.unmapped.bam", "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-4/execution/NA12812_B.unmapped.bam", "/prt1/puluotong/PMO/wangxh/TempWork/WDLTest/Test03/cromwell-executions/PairendFqtoUnmappedBam_wdl/459749fe-258c-4ab3-b61d-dc8090a69752/call-PairendFastQsToUnmappedBAM/shard-5/execution/NA12812_C.unmapped.bam"]
+  },
+  "id": "459749fe-258c-4ab3-b61d-dc8090a69752"
+}
+[2018-03-08 11:24:58,27] [info] Message [cromwell.core.actor.StreamActorHelper$StreamFailed] without sender to Actor[akka://cromwell-system/deadLetters] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+[2018-03-08 11:24:58,28] [info] Message [cromwell.core.actor.StreamActorHelper$StreamFailed] without sender to Actor[akka://cromwell-system/deadLetters] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
