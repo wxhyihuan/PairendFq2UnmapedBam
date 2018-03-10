@@ -1,3 +1,24 @@
+######################################
+# Creator Name: Wangxh
+# Email Add:    wxh244295043[AT]qq.com
+
+## 
+## This WDL converts paired FASTQ to uBAM and adds read group information 
+##
+## Requirements/expectations :
+## - Pair-end sequencing data in FASTQ format (one file per orientation)
+## - One or more read groups, one per pair of FASTQ files 
+##
+##
+## Outputs :
+## - Set of unmapped BAMs, one per read group
+##
+## Cromwell version support 
+## - Successfully tested on v30
+##
+######################################
+
+# WORKFLOW DEFINITION
 workflow PairendFqtoUnmappedBam_wdl{
   File inputSamplesFile
   String utilsdir
