@@ -25,16 +25,18 @@ NA12812	NA12812_C	Solexa-NA12812	100;100	300	50462	H06JUADXX130119.1.ATCACGAC	20
 #Run
 首先需要得到wdl需要配置的参数信息
 ```sh
-$ java -jar /prt1/puluotong/PMO/wangxh/Software/src/WorkflowDL/wdltool-0.14.jar inputs PairendFqtoUnmappedBam.wdl >PairendFqtoUnmappedBam.json
+$ java -jar /wdltool-0.14.jar inputs PairendFqtoUnmappedBam.wdl >PairendFqtoUnmappedBam.json
 ```
 得到类似如下的json文件，将引号内的信息替换为相应的参数值，如下：
+```
 {
   "PairendFqtoUnmappedBam_wdl.PairendFastQsToUnmappedBAM.gatk_path": "~/gatk-4.0.2.0/gatk",
   "PairendFqtoUnmappedBam_wdl.utilsdir": "~/Utils",
   "PairendFqtoUnmappedBam_wdl.inputSamplesFile": "~/execution/fqtobammetainfo.motifeddate.tsv"
 }
+```
 
 设置好后，运行即可：
 ```sh
-$java -jar /cromwell-30.1.jar run PairendFqtoUnmappedBam.wdl --inputs PairendFqtoUnmappedBam.json
+$ java -jar /cromwell-30.1.jar run PairendFqtoUnmappedBam.wdl --inputs PairendFqtoUnmappedBam.json
 ```
